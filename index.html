@@ -32,8 +32,9 @@
           >
             Create a new post
           </button>
-          <button class="btn btn-menu">
-            <i class="bi bi-three-dots-vertical"></i>
+          <button class="btn btn-settings" data-bs-toggle="modal" data-bs-target="#settingsModal">
+            <i class="bi bi-gear-fill"></i>
+            <i class="bi bi-caret-down-fill"></i>
           </button>
         </div>
       </div>
@@ -93,6 +94,23 @@
                 <button type="submit" class="btn btn-green">Publish</button>
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal fade" id="settingsModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-end">
+        <div class="modal-content">
+          <div class="modal-body">
+            <ul class="settings-list">
+              <li><a href="#" class="settings-item">Profile</a></li>
+              <li><a href="#" class="settings-item">Accessibility</a></li>
+              <li><a href="#" class="settings-item">Privacy and Data</a></li>
+              <hr class="settings-divider">
+              <li><a href="#" class="settings-item settings-logout">Log out</a></li>
+            </ul>
           </div>
         </div>
       </div>

@@ -40,10 +40,24 @@ body {
     background-color: #218838;
 }
 
-.btn-menu {
-    color: #757575;
-    font-size: 1.5rem;
-    padding: 0;
+.btn-settings {
+    background-color: #757575;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 7px 10px; 
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ffffff;
+    font-size: .75rem;
+    height: 40px; 
+}
+
+.btn-settings:hover {
+    background-color: #757575;
+    border: 1px solid #ced4da;
+    /* Updated to change icon color from white to black on hover */
+    color: #000000;
 }
 
 /* Toggle Buttons Styling */
@@ -71,7 +85,9 @@ body {
 
 /* Modal styling */
 .modal-content {
-    border-radius: 10px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .modal-header {
@@ -127,6 +143,45 @@ body {
 .btn-icon:hover {
     color: #333333;
     background-color: #e9ecef;
+}
+
+.modal-dialog-end {
+    position: absolute;
+    right: 30px;
+    margin: 0;
+    top: 60px;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.settings-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.settings-item {
+    display: block;
+    padding: 10px 20px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.settings-item:hover {
+    background-color: #f8f9fa;
+}
+
+.settings-logout {
+    color: #ff0000;
+}
+
+.settings-divider {
+    border: 0;
+    border-top: 1px solid #757575;
+    margin: 0 -20px;
 }
 
 /* Grid styling */
