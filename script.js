@@ -14,6 +14,8 @@ function applyView(view) {
     items.forEach((item) => {
       item.classList.remove("inline");
       item.classList.add("col-4", "p-0");
+      item.querySelector(".inline-header").style.display = "none";
+      item.querySelector(".inline-footer").style.display = "none";
     });
     elements.gridViewBtn.classList.add("active");
     elements.inlineViewBtn.classList.remove("active");
@@ -21,6 +23,8 @@ function applyView(view) {
     items.forEach((item) => {
       item.classList.remove("col-4", "p-0");
       item.classList.add("inline");
+      item.querySelector(".inline-header").style.display = "flex";
+      item.querySelector(".inline-footer").style.display = "block";
     });
     elements.inlineViewBtn.classList.add("active");
     elements.gridViewBtn.classList.remove("active");
@@ -33,11 +37,26 @@ elements.inlineViewBtn.addEventListener("click", () => applyView("inline"));
 elements.postForm.addEventListener("submit", function (e) {
   e.preventDefault();
   const imageUrl = elements.postImage.value;
+  const caption = elements.postCaption.value;
   const newImage = `
-        <div class="grid-item">
-            <img src="${imageUrl}" class="grid-img" alt="New Post">
-        </div>
-    `;
+    <div class="grid-item">
+      <div class="inline-header">
+        <h5>New Post</h5>
+        <p class="date">${new Date().toLocaleDateString("en-US", {
+          month: "2-digit",
+          day: "2-digit",
+        })}</p>
+      </div>
+      <img src="${imageUrl}" class="grid-img" alt="New Post">
+      <div class="inline-footer">
+        <p class="likes">0 Likes</p>
+        <p class="caption">${
+          caption ||
+          "This is an example of a very good photo that you can post on instagram"
+        }</p>
+      </div>
+    </div>
+  `;
   elements.imageGrid.insertAdjacentHTML("afterbegin", newImage);
   elements.postImage.value = "";
   elements.postCaption.value = "";
@@ -47,3 +66,5 @@ elements.postForm.addEventListener("submit", function (e) {
     elements.inlineViewBtn.classList.contains("active") ? "inline" : "grid"
   );
 });
+
+document.addEventListener("DOMContentLoaded", () => applyView("grid"));

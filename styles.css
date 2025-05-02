@@ -117,7 +117,7 @@ body {
 }
 
 .btn-secondary:hover {
-    color: black;
+  color: black;
 }
 
 .modal-footer {
@@ -203,8 +203,56 @@ body {
 .grid-item.inline {
   max-width: 600px;
   margin: 0 auto 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 15px;
 }
 
 .grid-item.inline .grid-img {
   height: 400px;
+}
+
+.inline-header,
+.inline-footer {
+  display: none;
+}
+
+.grid-item.inline .inline-header,
+.grid-item.inline .inline-footer {
+  display: block;
+}
+
+.inline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.inline-header h5 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.inline-header .date {
+  margin: 0;
+  font-size: 14px;
+  color: black;
+}
+
+.inline-footer {
+  margin-top: 10px;
+}
+
+.inline-footer .likes {
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.inline-footer .caption {
+  margin: 0;
+  font-size: 14px;
+  color: black;
 }
