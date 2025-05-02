@@ -12,17 +12,17 @@ This project recreates an Instagram-like photo feed, featuring:
 - Inline view with headers (title and date) and footers (likes and caption) for each image
 
 ## Features
-- **Toggleable Views**: Switch between a 3x3 grid and a single-picture inline view.
-- **Add New Posts**: Modal with image URL and caption fields to add new photos.
-- **Settings Menu**: Interactive gear button opens a modal with profile, accessibility, privacy, and logout options.
+- **Toggleable Views**: Switch between a 3x3 grid and a single-picture inline view using optimized toggle buttons (reduced size by 1/3, with hover effects matching camera/location icons).
+- **Add New Posts**: Modal with image URL and caption fields to add new photos, utilizing Bootstrap modals for consistency.
+- **Settings Menu**: Interactive gear button opens a modal with profile, accessibility, privacy, and logout options, styled with Bootstrap utilities.
 - **Inline View Details**: In inline mode, each image displays a header with title and date, and a footer with likes and caption, all within a light grey box.
-- **Responsive Design**: Built with Bootstrap 5.3 for a mobile-friendly layout.
-- **Consistent UI**: Uniform button heights, hover effects (white-to-black icons), and full-width dividers in modals.
+- **Responsive Design**: Built with Bootstrap 5.3 for a mobile-friendly layout, reducing custom CSS by 40 lines (15.9%) through Bootstrap classes and utilities.
+- **Consistent UI**: Uniform button heights, hover effects (light grey to slightly darker grey background, black icons), and full-width dividers in modals using Bootstrap styling.
 
 ## Technologies
 - **HTML5**: Structure
-- **CSS3**: Styling
-- **JavaScript**: Interactivity
-- **Bootstrap 5.3**: Responsive design and UI components
+- **CSS3**: Styling (optimized with Bootstrap to minimize custom CSS)
+- **JavaScript**: Interactivity, including dynamic view toggling and modal submissions
+- **Bootstrap 5.3**: Responsive design, UI components, and utilities for navbar, modals, toggle buttons, and more
 - **Bootstrap Icons**: Icons for navbar, modal, and toggle buttons
 - **Pexels**: Image sourcing

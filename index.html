@@ -19,25 +19,25 @@
   </head>
   <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top bg-white py-0 px-3">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <i class="bi bi-camera"></i>Instagram
+        <a class="navbar-brand fw-bold" href="#">
+          <i class="bi bi-camera me-1"></i>Instagram
         </a>
         <div class="ms-auto d-flex align-items-center">
           <button
-            class="btn btn-green"
+            class="btn btn-success btn-green me-2"
             data-bs-toggle="modal"
             data-bs-target="#postModal"
           >
             Create a new post
           </button>
           <button
-            class="btn btn-settings"
+            class="btn btn-secondary btn-settings d-flex align-items-center"
             data-bs-toggle="modal"
             data-bs-target="#settingsModal"
           >
-            <i class="bi bi-gear-fill"></i>
+            <i class="bi bi-gear-fill me-1"></i>
             <i class="bi bi-caret-down-fill"></i>
           </button>
         </div>
@@ -45,11 +45,11 @@
     </nav>
 
     <!-- Toggle Buttons -->
-    <div class="container toggle-buttons">
-      <button id="gridViewBtn" class="btn btn-toggle active">
+    <div class="container toggle-buttons mt-5 mb-2 text-center">
+      <button id="gridViewBtn" class="btn btn-outline-secondary btn-toggle me-1 ms-1 active">
         <i class="bi bi-grid-3x3"></i>
       </button>
-      <button id="inlineViewBtn" class="btn btn-toggle">
+      <button id="inlineViewBtn" class="btn btn-outline-secondary btn-toggle me-1 ms-1">
         <i class="bi bi-list"></i>
       </button>
     </div>
@@ -57,12 +57,12 @@
     <!-- Post Creation Modal -->
     <div class="modal fade" id="postModal" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Create a new post</h5>
+        <div class="modal-content rounded-1 shadow">
+          <div class="modal-header py-2">
+            <h5 class="modal-title fw-bold text-dark">Create a new post</h5>
             <button class="btn-close" data-bs-dismiss="modal"></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body p-2">
             <form id="postForm">
               <div class="mb-3">
                 <label for="postImage" class="form-label">Image URL</label>
@@ -83,15 +83,15 @@
                   required
                 ></textarea>
               </div>
-              <div class="modal-icons d-flex">
-                <button class="btn btn-icon">
+              <div class="d-flex mb-3 gap-2">
+                <button class="btn btn-outline-secondary btn-icon">
                   <i class="bi bi-camera-fill"></i>
                 </button>
-                <button class="btn btn-icon">
+                <button class="btn btn-outline-secondary btn-icon">
                   <i class="bi bi-geo-alt-fill"></i>
                 </button>
               </div>
-              <div class="modal-footer">
+              <div class="modal-footer py-1">
                 <button class="btn btn-secondary" data-bs-dismiss="modal">
                   Close
                 </button>
@@ -105,14 +105,14 @@
 
     <!-- Settings Modal -->
     <div class="modal fade" id="settingsModal" tabindex="-1">
-      <div class="modal-dialog modal-dialog-end">
-        <div class="modal-content">
-          <div class="modal-body">
-            <ul class="settings-list">
+      <div class="modal-dialog end-modal">
+        <div class="modal-content rounded-1 shadow">
+          <div class="modal-body p-2">
+            <ul class="list-unstyled m-0 p-0">
               <li><a href="#" class="settings-item">Profile</a></li>
               <li><a href="#" class="settings-item">Accessibility</a></li>
               <li><a href="#" class="settings-item">Privacy and Data</a></li>
-              <hr class="settings-divider" />
+              <hr class="my-0 mx-n4 border-secondary" />
               <li>
                 <a href="#" class="settings-item settings-logout">Log out</a>
               </li>
