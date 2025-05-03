@@ -40,6 +40,7 @@ elements.postForm.addEventListener("submit", function (e) {
   const caption = elements.postCaption.value;
   const newImage = `
     <div class="grid-item">
+      <button class="delete-btn position-absolute top-0 end-0">×</button>
       <div class="inline-header">
         <h5>New Post</h5>
         <p class="date">${new Date().toLocaleDateString("en-US", {
@@ -65,6 +66,25 @@ elements.postForm.addEventListener("submit", function (e) {
   applyView(
     elements.inlineViewBtn.classList.contains("active") ? "inline" : "grid"
   );
+});
+
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("delete-btn")) {
+    const post = e.target.closest(".grid-item");
+    const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
+    deleteModal.show();
+
+    const confirmDeleteBtn = document.getElementById("confirmDeleteBtn");
+    const handleConfirm = function () {
+      post.remove();
+      applyView(
+        elements.inlineViewBtn.classList.contains("active") ? "inline" : "grid"
+      );
+      deleteModal.hide();
+      confirmDeleteBtn.removeEventListener("click", handleConfirm); 
+    };
+    confirmDeleteBtn.addEventListener("click", handleConfirm);
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => applyView("grid"));

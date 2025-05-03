@@ -152,6 +152,10 @@ body {
   display: block;
 }
 
+.grid-item {
+  position: relative;
+}
+
 .grid-item.inline {
   max-width: 600px;
   margin: 0 auto 20px;
@@ -207,4 +211,73 @@ body {
   margin: 0;
   font-size: 14px;
   color: black;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #e6e6e6; 
+  border: none;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  line-height: 1;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 12px;
+  cursor: pointer;
+  z-index: 10;
+  top: 5px;
+  left: calc(100% - 20px);
+}
+.delete-btn:hover {
+  background-color: #b0b0b0; 
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  padding: 8px 15px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* Delete Modal */
+#deleteModal .modal-dialog {
+  transform: scale(0.5); 
+  transform-origin: center; 
+  width: 500px; 
+  max-width: none; 
+}
+#deleteModal .modal-content {
+  min-height: 0; 
+  padding: 10px; 
+}
+#deleteModal .modal-header {
+  padding: 2px; 
+  border-bottom: none; 
+}
+#deleteModal .modal-body {
+  padding: 2px; 
+  margin: 0; 
+}
+#deleteModal .modal-footer {
+  padding: 2px; 
+  border-top: none; 
+  justify-content: center; 
+}
+#deleteModal .btn {
+  padding: 1px 3px;
+}
+
+.grid-item:not(.inline) .delete-btn {
+  opacity: 0; 
+}
+.grid-item:not(.inline):hover .delete-btn {
+  opacity: 1; 
 }

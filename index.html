@@ -46,10 +46,16 @@
 
     <!-- Toggle Buttons -->
     <div class="container toggle-buttons mt-5 mb-2 text-center">
-      <button id="gridViewBtn" class="btn btn-outline-secondary btn-toggle me-1 ms-1 active">
+      <button
+        id="gridViewBtn"
+        class="btn btn-outline-secondary btn-toggle me-1 ms-1 active"
+      >
         <i class="bi bi-grid-3x3"></i>
       </button>
-      <button id="inlineViewBtn" class="btn btn-outline-secondary btn-toggle me-1 ms-1">
+      <button
+        id="inlineViewBtn"
+        class="btn btn-outline-secondary btn-toggle me-1 ms-1"
+      >
         <i class="bi bi-list"></i>
       </button>
     </div>
@@ -122,11 +128,33 @@
       </div>
     </div>
 
+    <!-- Delete Confirmation Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-1 shadow">
+          <div class="modal-header py-2">
+            <h5 class="modal-title fw-bold text-dark">Confirm Delete</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-2">
+            <p>Are you sure you want to DELETE?</p>
+          </div>
+          <div class="modal-footer py-1">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              Cancel
+            </button>
+            <button id="confirmDeleteBtn" class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Image Grid -->
     <div class="container image-grid">
       <div class="row" id="imageGrid">
         <!-- Row 1 -->
         <div class="col-4 p-0 grid-item">
+          <button class="delete-btn position-absolute top-0 end-0">×</button>
           <div class="inline-header">
             <h5>My New Puppies</h5>
             <p class="date">08/26</p>
@@ -142,6 +170,7 @@
           </div>
         </div>
         <div class="col-4 p-0 grid-item">
+          <button class="delete-btn position-absolute top-0 end-0">×</button>
           <div class="inline-header">
             <h5>Project Fun</h5>
             <p class="date">04/09</p>
@@ -157,6 +186,7 @@
           </div>
         </div>
         <div class="col-4 p-0 grid-item">
+          <button class="delete-btn position-absolute top-0 end-0">×</button>
           <div class="inline-header">
             <h5>Beautiful Sea Turtle</h5>
             <p class="date">06/10</p>
@@ -173,6 +203,7 @@
         </div>
         <!-- Row 2 -->
         <div class="col-4 p-0 grid-item">
+          <button class="delete-btn position-absolute top-0 end-0">×</button>
           <div class="inline-header">
             <h5>Delicious Food</h5>
             <p class="date">06/10</p>
@@ -188,6 +219,7 @@
           </div>
         </div>
         <div class="col-4 p-0 grid-item">
+          <button class="delete-btn position-absolute top-0 end-0">×</button>
           <div class="inline-header">
             <h5>Fashion Model</h5>
             <p class="date">06/10</p>
@@ -203,6 +235,7 @@
           </div>
         </div>
         <div class="col-4 p-0 grid-item">
+          <button class="delete-btn position-absolute top-0 end-0">×</button>
           <div class="inline-header">
             <h5>Baseball In Action</h5>
             <p class="date">06/10</p>
@@ -219,6 +252,7 @@
         </div>
         <!-- Row 3 -->
         <div class="col-4 p-0 grid-item">
+          <button class="delete-btn position-absolute top-0 end-0">×</button>
           <div class="inline-header">
             <h5>Family Fun Day</h5>
             <p class="date">06/10</p>
@@ -234,6 +268,7 @@
           </div>
         </div>
         <div class="col-4 p-0 grid-item">
+          <button class="delete-btn position-absolute top-0 end-0">×</button>
           <div class="inline-header">
             <h5>Coding Session</h5>
             <p class="date">06/10</p>
@@ -249,6 +284,7 @@
           </div>
         </div>
         <div class="col-4 p-0 grid-item">
+          <button class="delete-btn position-absolute top-0 end-0">×</button>
           <div class="inline-header">
             <h5>Students Collaborating</h5>
             <p class="date">06/10</p>
