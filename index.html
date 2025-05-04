@@ -19,47 +19,60 @@
   </head>
   <body>
     <!-- Navigation Bar -->
+    <!-- CHANGE: Add navbar toggler for mobile to prevent overlap with toggle buttons -->
     <nav class="navbar navbar-expand-lg fixed-top bg-white py-0 px-3">
       <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="#">
           <i class="bi bi-camera me-1"></i>Instagram
         </a>
-        <div class="ms-auto d-flex align-items-center">
-          <button
-            class="btn btn-success btn-green me-2"
-            data-bs-toggle="modal"
-            data-bs-target="#postModal"
-          >
-            Create a new post
-          </button>
-          <button
-            class="btn btn-secondary btn-settings d-flex align-items-center"
-            data-bs-toggle="modal"
-            data-bs-target="#settingsModal"
-          >
-            <i class="bi bi-gear-fill me-1"></i>
-            <i class="bi bi-caret-down-fill"></i>
-          </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <div class="ms-auto d-flex align-items-center">
+            <button
+              class="btn btn-success btn-green me-2"
+              data-bs-toggle="modal"
+              data-bs-target="#postModal"
+            >
+              Create a new post
+            </button>
+            <button
+              class="btn btn-secondary btn-settings d-flex align-items-center"
+              data-bs-toggle="modal"
+              data-bs-target="#settingsModal"
+            >
+              <i class="bi bi-gear-fill me-1"></i>
+              <i class="bi bi-caret-down-fill"></i>
+            </button>
+          </div>
         </div>
       </div>
     </nav>
 
-   <!-- View Toggle Buttons -->
-<!-- CHANGE: Adjust margin for mobile visibility -->
-<div class="container toggle-buttons mt-lg-5 mt-2 mb-2 text-center">
-  <button
-    id="gridViewBtn"
-    class="btn btn-outline-secondary btn-toggle me-1 ms-1 active"
-  >
-    <i class="bi bi-grid-3x3"></i>
-  </button>
-  <button
-    id="inlineViewBtn"
-    class="btn btn-outline-secondary btn-toggle me-1 ms-1"
-  >
-    <i class="bi bi-list"></i>
-  </button>
-</div>
+    <!-- View Toggle Buttons -->
+    <div class="container toggle-buttons mt-5 mb-2 text-center">
+      <button
+        id="gridViewBtn"
+        class="btn btn-outline-secondary btn-toggle me-1 ms-1 active"
+      >
+        <i class="bi bi-grid-3x3"></i>
+      </button>
+      <button
+        id="inlineViewBtn"
+        class="btn btn-outline-secondary btn-toggle me-1 ms-1"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
 
     <!-- Create Post Modal -->
     <div class="modal fade" id="postModal" tabindex="-1">

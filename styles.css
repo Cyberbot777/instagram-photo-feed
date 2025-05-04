@@ -293,3 +293,21 @@ body {
   transform-origin: center;
   margin: 0 auto;
 }
+
+/* Media Query */
+@media (max-width: 991.98px) {
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem; /* Reduce padding for smaller size */
+    font-size: 1rem; /* Smaller icon size */
+  }
+
+  .navbar-toggler-icon {
+    width: 1.2em; /* Match camera icon size (24px) */
+    height: 1.2em;
+  }
+
+  .toggle-buttons {
+    margin-top: 0.5rem;
+    padding-top: 1.25rem; /* Equivalent to 20px, pushes toggle buttons below navbar */
+  }
+}
