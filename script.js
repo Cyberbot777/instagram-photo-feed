@@ -2,6 +2,7 @@ const elements = {
   postForm: document.getElementById("postForm"),
   postImage: document.getElementById("postImage"),
   postCaption: document.getElementById("postCaption"),
+  postTitle: document.getElementById("postTitle"),
   imageGrid: document.getElementById("imageGrid"),
   postModal: document.getElementById("postModal"),
   gridViewBtn: document.getElementById("gridViewBtn"),
@@ -38,11 +39,12 @@ elements.postForm.addEventListener("submit", function (e) {
   e.preventDefault();
   const imageUrl = elements.postImage.value;
   const caption = elements.postCaption.value;
+  const title = elements.postTitle.value;
   const newImage = `
     <div class="grid-item">
-      <button class="delete-btn position-absolute top-0 end-0">×</button>
+      <button class="delete-btn position-absolute">×</button>
       <div class="inline-header">
-        <h5>New Post</h5>
+        <h5>${title}</h5>
         <p class="date">${new Date().toLocaleDateString("en-US", {
           month: "2-digit",
           day: "2-digit",
@@ -61,6 +63,7 @@ elements.postForm.addEventListener("submit", function (e) {
   elements.imageGrid.insertAdjacentHTML("afterbegin", newImage);
   elements.postImage.value = "";
   elements.postCaption.value = "";
+  elements.postTitle.value = "";
   const modal = bootstrap.Modal.getInstance(elements.postModal);
   modal.hide();
   applyView(
@@ -71,7 +74,9 @@ elements.postForm.addEventListener("submit", function (e) {
 document.addEventListener("click", function (e) {
   if (e.target.classList.contains("delete-btn")) {
     const post = e.target.closest(".grid-item");
-    const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
+    const deleteModal = new bootstrap.Modal(
+      document.getElementById("deleteModal")
+    );
     deleteModal.show();
 
     const confirmDeleteBtn = document.getElementById("confirmDeleteBtn");
@@ -81,7 +86,7 @@ document.addEventListener("click", function (e) {
         elements.inlineViewBtn.classList.contains("active") ? "inline" : "grid"
       );
       deleteModal.hide();
-      confirmDeleteBtn.removeEventListener("click", handleConfirm); 
+      confirmDeleteBtn.removeEventListener("click", handleConfirm);
     };
     confirmDeleteBtn.addEventListener("click", handleConfirm);
   }
