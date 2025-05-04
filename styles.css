@@ -310,7 +310,6 @@ body {
   .navbar-toggler[aria-expanded="true"] {
     padding: 0.25rem 0.5rem;
     font-size: 1rem;
-    border: none;
     outline: none;
     box-shadow: none;
     background: transparent;
@@ -357,4 +356,5 @@ body {
 
 .toggle-buttons {
   padding-top: 1rem;
+  padding-top: 1.4rem;
 }
