@@ -302,7 +302,6 @@ body {
 }
 
 /* Mobile Adjustments */
-/* Remove dark grey border from hamburger menu on mobile */
 @media (max-width: 767.98px) {
   .navbar-toggler,
   .navbar-toggler:focus,
