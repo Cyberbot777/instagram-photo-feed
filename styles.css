@@ -296,18 +296,37 @@ body {
 
 /* Media Query */
 @media (max-width: 991.98px) {
-  .navbar-toggler {
-    padding: 0.25rem 0.5rem; 
-    font-size: 1rem; 
+  .navbar-toggler,
+  .navbar-toggler:focus,
+  .navbar-toggler:hover,
+  .navbar-toggler:active,
+  .navbar-toggler[aria-expanded="true"] {
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+    border: none !important;        /* Remove any border */
+    outline: none !important;       /* Remove focus outline */
+    box-shadow: none !important;    /* Remove shadow effects */
+    background: transparent !important; /* Ensure no background border */
   }
 
-  .navbar-toggler-icon {
-    width: 1.2em; 
+  .navbar-toggler-icon,
+  .navbar-toggler-icon:focus,
+  .navbar-toggler-icon:hover,
+  .navbar-toggler-icon:active {
+    width: 1.2em;
     height: 1.2em;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  .navbar-toggler::before,
+  .navbar-toggler::after {
+    display: none !important;
   }
 
   .toggle-buttons {
     margin-top: 0.5rem;
-    padding-top: 1.25rem; 
+    padding-top: 1.25rem;
   }
 }
