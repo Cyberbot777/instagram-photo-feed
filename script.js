@@ -41,25 +41,23 @@ elements.postForm.addEventListener("submit", function (e) {
   const caption = elements.postCaption.value;
   const title = elements.postTitle.value;
   const newImage = `
-    <div class="grid-item">
-      <button class="delete-btn position-absolute">×</button>
-      <div class="inline-header">
-        <h5>${title}</h5>
-        <p class="date">${new Date().toLocaleDateString("en-US", {
-          month: "2-digit",
-          day: "2-digit",
-        })}</p>
-      </div>
-      <img src="${imageUrl}" class="grid-img" alt="New Post">
-      <div class="inline-footer">
-        <p class="likes">0 Likes</p>
-        <p class="caption">${
-          caption ||
-          "This is an example of a very good photo that you can post on instagram"
-        }</p>
-      </div>
+  <div class="grid-item">
+    <button class="delete-btn position-absolute end-0">×</button>
+    <div class="inline-header">
+      <h5>${title}</h5>
+      <p class="date">${new Date().toLocaleDateString("en-US", {
+        month: "2-digit",
+        day: "2-digit",
+      })}</p>
     </div>
-  `;
+    <img src="${imageUrl}" class="grid-img" alt="New Post">
+    <div class="inline-footer">
+      <p class="likes">0 Likes</p>
+      <p class="caption">${caption}</p>
+    </div>
+  </div>
+`;
+
   elements.imageGrid.insertAdjacentHTML("afterbegin", newImage);
   elements.postImage.value = "";
   elements.postCaption.value = "";

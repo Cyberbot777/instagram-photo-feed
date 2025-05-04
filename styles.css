@@ -227,7 +227,7 @@ body {
   font-size: 12px;
   cursor: pointer;
   z-index: 10;
-  top: 5px;
+  top: 3px;
   left: calc(100% - 20px);
 }
 
@@ -292,13 +292,4 @@ body {
   transform: scale(0.7);
   transform-origin: center;
   margin: 0 auto;
-}
-
-/* Delete Button Visibility */
-.grid-item:not(.inline) .delete-btn {
-  display: none;
-}
-
-.grid-item:not(.inline):hover .delete-btn {
-  display: block;
 }
