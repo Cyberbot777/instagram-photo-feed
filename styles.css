@@ -303,10 +303,9 @@ body {
   .navbar-toggler[aria-expanded="true"] {
     padding: 0.25rem 0.5rem;
     font-size: 1rem;
-    border: none !important;        /* Remove any border */
-    outline: none !important;       /* Remove focus outline */
-    box-shadow: none !important;    /* Remove shadow effects */
-    background: transparent !important; /* Ensure no background border */
+    outline: none !important;      
+    box-shadow: none !important;   
+    background: transparent !important;
   }
 
   .navbar-toggler-icon,
